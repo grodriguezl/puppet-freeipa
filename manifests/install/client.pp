@@ -47,6 +47,7 @@ class freeipa::install::client {
     ${client_install_cmd_opts_mkhomedir} \
     ${client_install_cmd_opts_fixed_primary} \
     ${client_install_cmd_opts_no_ntp} \
+    ${freeipa::custom_options} \
     --unattended"
 
     exec { "client_install_${::fqdn}":

@@ -1,4 +1,4 @@
-# 
+#
 # @summary Installs freeipa server as replica
 #
 # @example
@@ -22,6 +22,7 @@ class freeipa::install::server::replica {
   ${freeipa::install::server::server_install_cmd_opts_no_ntp} \
   ${freeipa::install::server::server_install_cmd_opts_no_ui_redirect} \
   ${freeipa::install::server::server_install_cmd_opts_setup_ca} \
+  ${freeipa::custom_options} \
   --unattended"
 
   if ! $facts['iparole'] or $facts['iparole'] == 'replica' {

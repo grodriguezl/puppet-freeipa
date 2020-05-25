@@ -106,6 +106,7 @@ class freeipa (
   Boolean                              $server_install_ldaputils       = true,
   String                               $sssd_package_name              = 'sssd-common',
   String                               $sssdtools_package_name         = 'sssd-tools',
+  String                               $custom_options                 = '',
 ) {
 
   if $facts['kernel'] != 'Linux' or $facts['osfamily'] == 'Windows' {
